@@ -29,19 +29,23 @@
 
   
   
-    <meta name="description" content="网络安全与对抗 第2讲 Easy Sql 2打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显 ![image-20241023203346448](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023203346448.png) 随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），">
+    <meta name="description" content="网络安全与对抗 第2讲 Easy Sql 2打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显  随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），回显了一个提示让我们看看页面源代码  源代码如下，敏锐地发现sql语句，发现密码和账号是用一对单引号括起来的  那我们可以尝试一下用万能密码 万能密码的原理mysql 中and和or的优先级 比">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网络安全与对抗 第2讲 Easy Sql 2">
 <meta property="og:url" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/index.html">
 <meta property="og:site_name" content="Cyberangel">
-<meta property="og:description" content="网络安全与对抗 第2讲 Easy Sql 2打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显 ![image-20241023203346448](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023203346448.png) 随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），">
+<meta property="og:description" content="网络安全与对抗 第2讲 Easy Sql 2打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显  随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），回显了一个提示让我们看看页面源代码  源代码如下，敏锐地发现sql语句，发现密码和账号是用一对单引号括起来的  那我们可以尝试一下用万能密码 万能密码的原理mysql 中and和or的优先级 比">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/RvG1ZWtkKDjcg79.png">
+<meta property="og:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/cVKM3EtQO8HpjrU.png">
+<meta property="og:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/mnhlQXzKoyYEL74.png">
+<meta property="og:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/NbxQCs4P5UFicmt.png">
 <meta property="og:image" content="https://s2.loli.net/2024/11/27/3geZCVS1L9bRhKX.png">
 <meta property="article:published_time" content="2024-11-27T08:43:06.000Z">
-<meta property="article:modified_time" content="2024-11-27T12:51:10.930Z">
+<meta property="article:modified_time" content="2024-11-27T13:00:50.104Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2024/11/27/3geZCVS1L9bRhKX.png">
+<meta name="twitter:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/RvG1ZWtkKDjcg79.png">
   
   
     <link rel="alternate" href="/atom.xml" title="Cyberangel" type="application/atom+xml">
@@ -197,16 +201,16 @@
       
       
         <h2 id="网络安全与对抗-第2讲-Easy-Sql-2"><a href="#网络安全与对抗-第2讲-Easy-Sql-2" class="headerlink" title="网络安全与对抗 第2讲 Easy Sql 2"></a>网络安全与对抗 第2讲 Easy Sql 2</h2><p>打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显</p>
-<p>![image-20241023203346448](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023203346448.png)</p>
+<p><img src="/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/RvG1ZWtkKDjcg79.png"></p>
 <p>随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），回显了一个提示让我们看看页面源代码</p>
-<p>![image-20241023203457700](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023203457700.png)</p>
+<p><img src="/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/cVKM3EtQO8HpjrU.png"></p>
 <p><em><strong>源代码如下，敏锐地发现sql语句，发现密码和账号是用一对单引号括起来的</strong></em></p>
-<p>![image-20241023203646598](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023203646598.png)</p>
+<p><img src="/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/mnhlQXzKoyYEL74.png"></p>
 <p>那我们可以尝试一下用万能密码</p>
 <h3 id="万能密码的原理"><a href="#万能密码的原理" class="headerlink" title="万能密码的原理"></a>万能密码的原理</h3><p>mysql 中and和or的优先级</p>
 <p>比如说：</p>
 <p><strong>（）&gt; and  &gt;  or</strong></p>
-<p>![image-20241023204650983](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023204650983.png)</p>
+<p><img src="/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/Users/ld/hexo-blog/source/_posts/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202.assets/NbxQCs4P5UFicmt.png"></p>
 <p>那么对于这道题我们可以在密码中输入XXX‘  or 1&#x3D;1#(#用于注释掉后面的语句，防止后面的语句影响新构造的sql查询语句)</p>
 <p>那么实行的sql查询语句就是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from user_tab where user = &#x27;admin&#x27; and password = &#x27;XXX&#x27; or 1=1#</span><br></pre></td></tr></table></figure>
@@ -359,7 +363,7 @@
     
       <div>
         <span class="icon-brush"></span>
-        2.2k
+        2.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:07
