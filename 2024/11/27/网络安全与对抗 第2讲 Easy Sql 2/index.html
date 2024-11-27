@@ -36,10 +36,12 @@
 <meta property="og:site_name" content="Cyberangel">
 <meta property="og:description" content="网络安全与对抗 第2讲 Easy Sql 2打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显 ![image-20241023203346448](.&#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&#x2F;image-20241023203346448.png) 随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/e32f7a8a372820da7e9704cb21a23436.jpeg">
 <meta property="article:published_time" content="2024-11-27T08:43:06.000Z">
-<meta property="article:modified_time" content="2024-11-27T08:51:11.743Z">
+<meta property="article:modified_time" content="2024-11-27T09:04:27.674Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/e32f7a8a372820da7e9704cb21a23436.jpeg">
   
   
     <link rel="alternate" href="/atom.xml" title="Cyberangel" type="application/atom+xml">
@@ -210,6 +212,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from user_tab where user = &#x27;admin&#x27; and password = &#x27;XXX&#x27; or 1=1#</span><br></pre></td></tr></table></figure>
 
 <p>因为and的优先级大于or，会先执行user &#x3D; ‘admin’ and password &#x3D;’XXX’，后再执行or后面的1&#x3D;1，因为1&#x3D;1恒成立，所以这个sql语句恒成立。所以能够获得flag</p>
+<p><img src="/2024/11/27/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E6%8A%97%20%E7%AC%AC2%E8%AE%B2%20Easy%20Sql%202/e32f7a8a372820da7e9704cb21a23436.jpeg" alt="R C"></p>
 
       
     </div>
