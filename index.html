@@ -195,25 +195,16 @@
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2024-11-27</span>
-        <span><span class="icon-pencil"></span>302 字</span>
+        <span><span class="icon-pencil"></span>386 字</span>
         <span><span class="icon-clock"></span>1 分钟</span>
       </div>
       <h2 class="post-title">网络安全与对抗 第2讲 Easy Sql 2</h2>
       <article class="post-article">
         
           网络安全与对抗 第2讲 Easy Sql 2打开靶机就看到这个登录界面，随便输入一个密码看看有什么回显
-
+![image-20241023203346448](.&amp;#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&amp;#x2F;image-20241023203346448.png)
 随便输入一个弱口令进去（因为有些简单的web题密码真的就是弱口令，想在这里碰个运气但是貌似没成功），回显了一个提示让我们看看页面源代码
-
-源代码如下，敏锐地发现sql语句，发现密码和账号是用一对单引号括起来的
-
-那我们可以尝试一下用万能密码
-万能密码的原理mysql 中and和or的优先级
-比如说：
-（）&amp;gt; and  &amp;gt;  or
-
-那么对于这道题我们可以在密码中输入XXX‘  or 1&amp;#x3D;1#(#用于注释掉后面的语句，防止后面的语句影响新构造的sql查询语句)
-那么实行
+![image-20241023203457700](.&amp;#x2F;网络安全与对抗 第2讲 Easy Sql 2.assets&amp;#x2F;image-2024102
         
       </article>
     </div>
@@ -494,7 +485,7 @@ Run server1$ hexo ser
     
       <div>
         <span class="icon-brush"></span>
-        2.1k
+        2.2k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:07
